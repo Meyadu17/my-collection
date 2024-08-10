@@ -1,0 +1,22 @@
+  <div class="center"*ngIf="!hasCards">
+  <div class="card-image color-beige3 card-size">
+    <img class="image-size" src="images/polaroid.png">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content center">
+      <p><b><I>Il n'y a pas encore de cartes postales</I></b></p>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngFor="let carte of cartesArray">
+  <div class="card-image color-beige3 card-size">
+    <img class="image-size" [src]="carte.lien">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content center">
+      <p><b><i>{{ carte.ville }}</i></b></p>
+      <p>{{ carte.description }}</p>
+    </div>
+  </div> 
+</div>

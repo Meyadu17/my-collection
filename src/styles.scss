@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+$beige1:#DDD1BC;
+$beige2:#D2B48C;
+$beige3:#AE9261;
+$beige4:#998768;
+$noir:#202327;
+
+.logo {
+    display: flex;
+    height: 100px;
+    width: auto;
+}
+.logo-border {
+    align-items: center;
+}
+.text-black-color {
+    color: $noir !important;    
+}
+body{
+    background-color: $beige2;
+}
+.color-beige2-1 {
+    background: linear-gradient(to left bottom, $beige2,  $beige1)!important;
+    background: -webkit-linear-gradient(to left bottom, $beige2,  $beige1)!important;
+}
+.background-color-beige1 {
+    background-color: $beige1;    
+}
+.image-size{
+    object-fit: contain;
+    width: 600px;
+    height: 400px;
+}
+.card-size{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
