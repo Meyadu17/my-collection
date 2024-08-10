@@ -1,9 +1,9 @@
 <main>
 <div class="row">
-    <div class="col s2">
+    <div class="col s3">
       <div class="row">
         
-        <div class="card horizontal color-beige2-1 logo-border">
+        <div class="card horizontal color-beige2-1 logo-border  change-color" (click)="goToChangePage('/accueil')">
             <img src="images/favicon.jpg" class="logo">
           <div class="card-stacked">
             <div class="card-content">
@@ -21,7 +21,7 @@
         <div class="card color-beige2-1">
 
           <div class="card-action tab-container color-beige2-1">
-            <a class="text-black-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === 500, 
+            <a class="text-black-color change-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === 500, 
                       'mon-onglet-actif': selectedTab === 500}" (click)="selectTab(500)">
               Administration
               <i class="tiny material-icons">arrow_drop_down</i>
@@ -29,13 +29,13 @@
             <div *ngIf="selectedTab === 500">
               <table class="highlight text-color-noir">
                 <tbody>
-                  <tr class="color-beige1-2" (click)="goToListCard(valeur)">
+                  <tr class="color-beige1-2 change-color" (click)="goToListCard(valeur)">
                     <td>Nouvelle carte</td>
                   </tr>
-                  <tr class="color-beige1-2" (click)="goToListCard(valeur)">
+                  <tr class="color-beige1-2 change-color" (click)="goToListCard(valeur)">
                     <td>Les région</td>
                   </tr>
-                  <tr class="color-beige1-2" (click)="goToListCard(valeur)">
+                  <tr class="color-beige1-2 change-color" (click)="goToListCard(valeur)">
                     <td>Les départements</td>
                   </tr>
                 </tbody>
@@ -44,15 +44,15 @@
           </div>
 
           <div *ngFor='let region of regionList' class="card-action tab-container color-beige2-1">
-            <a class="text-black-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === region.id, 
+            <a class="text-black-color change-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === region.id, 
                       'mon-onglet-actif': selectedTab === region.id}" (click)="selectTab(region.id)">
               {{ region.nom }}
               <i class="tiny material-icons">arrow_drop_down</i>
             </a>
             <div *ngIf="selectedTab === region.id">
-              <table class="highlight color-noir">
+              <table class="highlight color-noir ">
                 <tbody>
-                  <tr class="color-beige1-2" *ngFor='let departement of region.departements' (click)="goToListCard(departement.valeur)">
+                  <tr class="color-beige1-2 change-color" *ngFor='let departement of region.departements' (click)="goToListCard(departement.valeur)">
                     <td>{{ departement.nom }} - {{ departement.valeur }}</td>
                   </tr>
                 </tbody>
@@ -64,7 +64,7 @@
       </div> 
     </div>
 
-    <div class="col s9">
+    <div class="col s8"><br>
       <router-outlet></router-outlet>
     </div>
 
@@ -78,10 +78,10 @@
     <div class="footer-copyright">
       <div class="container text-black-color">
         <div class="row">
-          <div class="col s3"> <a class="text-black-color" (click)="goToChangePage('/mentions-legales')">Mentions légales</a></div>
-          <div class="col s3"> <a class="text-black-color" (click)="goToChangePage('/mentions-legales')">Contact</a></div>
-          <div class="col s3"> <a class="text-black-color" (click)="goToChangePage('/mentions-legales')">Plan du site</a></div>
-          <div class="col s3">© 2024 - by <a class="text-black-color" href="https://www.linkedin.com/in/mélody-delage-8a2a471b0" target="_blank">Mélody Delage</a></div>
+          <div class="col s3" appFooter> <a class="text-black-color change-color" (click)="goToChangePage('/mentions-legales')" >Mentions légales</a></div>
+          <div class="col s3" appFooter> <a class="text-black-color change-color" (click)="goToChangePage('/contact')">Contact</a></div>
+          <div class="col s3" appFooter> <a class="text-black-color change-color" (click)="goToChangePage('/plan-site')">Plan du site</a></div>
+          <div class="col s3" appFooter>© 2024 - by <a class="text-black-color change-color" href="https://www.linkedin.com/in/mélody-delage-8a2a471b0" target="_blank">Mélody Delage</a></div>
         </div>
       </div>
     </div>

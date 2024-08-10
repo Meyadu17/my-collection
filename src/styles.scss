@@ -16,6 +16,10 @@ $noir:#202327;
 .text-black-color {
     color: $noir !important;    
 }
+.change-color:hover{
+    color:#3a220b !important;
+    font-weight: bold;
+}
 body{
     background-color: $beige2;
 }
@@ -35,4 +39,7 @@ body{
     display: flex; 
     align-items: center; 
     justify-content: center;
+}
+.border-card{
+    border: 7px solid $beige3 !important;
 }
