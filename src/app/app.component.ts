@@ -39,6 +39,10 @@ export class AppComponent {
     this.router.navigate(['/departement', valeur], { queryParams: { valeur } });
   }
 
+  goToChangePage(valeur:string){
+    this.router.navigate([valeur]);
+  }
+
   selectTab(tabId: number) {
     this.selectedTab = tabId;
   }
